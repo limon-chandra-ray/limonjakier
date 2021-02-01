@@ -1,0 +1,45 @@
+{% extends 'home/base.html' %}
+{% block content %}
+      <div class="container">
+            <div class="row mt-5">
+                  <div class="col-md-6 mx-auto">
+                        <div class="row mt-5">
+                              {% if messages %}
+                                    {% for message in messages %}
+                                          <div class="alert alert-danger">
+                                                {{message}}
+                                          </div>
+                                    {% endfor %}
+                              {% endif %}
+                              <div class="col-md-8 mx-auto">
+                                    <div class="card">
+                                          <div class="card-body">
+                                                <h5 class="card-title text-center">Log In</h5>
+                                                <form method="post">
+                                                      {% csrf_token %}
+                                                      <div class="col-sm-12 my-1">
+                                                            <input type="text" name="username" class="form-control" placeholder="User name">
+                                                      </div>
+
+                                                      <div class="col-sm-12 my-1">
+                                                            <input type="password" name="password" class="form-control" placeholder="Password">
+                                                      </div> 
+
+                                                      <div class="col-sm-12 mt-3">
+                                                            <input type="submit" class="form-control btn btn-primary" placeholder="Log in">
+                                                      </div>
+                                                </form>
+
+                                          </div>
+                                          <div class="card-body">
+                                                <div class="text-center">Are You not create account? Please, 
+                                                      <a href="#">Sign Up</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+{% endblock content %}

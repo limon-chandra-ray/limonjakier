@@ -1,0 +1,25 @@
+.body_color{
+      background-color: rgba(44, 40, 40, 0.87);
+}
+.a_text{
+      color: rgba(12, 6, 6, 0.87);
+      font-weight: bold;
+      font-style: italic;
+}
+.h1color{
+      color: white;
+}
+.carousel_image{
+      height: 450px;
+      width: 100%;
+}
+.product_head{
+      background-color: gray;
+      border-radius: 10px;
+}
+.product_head_color{
+      color: white;
+}
+.offer_price{
+      color: red;    
+}

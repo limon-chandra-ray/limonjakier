@@ -1,0 +1,53 @@
+{% extends 'home/base.html' %}
+{% block content %}
+      <div class="container">
+            <div class="row mt-5">
+                  <div class="col-md-6 mx-auto">
+                        <div class="row mt-5">
+                              {% if messages %}
+                                    {% for message in messages %}
+                                          <div class="alert alert-danger">
+                                                {{message}}
+                                          </div>
+                                    {% endfor %}
+                              {% endif %}
+                              <div class="col-md-8 mx-auto">
+                                    <div class="card">
+                                          <div class="card-body">
+                                                <h5 class="card-title text-center">Register</h5>
+                                                <form method="post">
+                                                      {% csrf_token %}
+                                                      <div class="col-sm-12 my-1">
+                                                            <input type="text" name="username" class="form-control" placeholder="User name">
+                                                      </div>
+                                                      <div class="col-sm-12 my-1">
+                                                            <input type="email" name="useremail" class="form-control" placeholder="User Email Address">
+                                                      </div>
+                                                      <div class="col-sm-12 my-1">
+                                                            <input type='tel' name="userphone" class="form-control" min="11" max="11" placeholder="User phone number" pattern="[0-9]{11}">
+                                                      </div>
+                                                      <div class="col-sm-12 my-1">
+                                                            <input type="password" name="password1" class="form-control" placeholder="Password">
+                                                      </div> 
+                                                      <div class="col-sm-12 my-1">
+                                                            <input type="password" name="password2" class="form-control" placeholder="Confrim password">
+                                                      </div>
+                                                      <div class="col-sm-12 mt-3">
+                                                            <input type="submit" class="form-control btn btn-primary" placeholder="Sign Up">
+                                                      </div>
+                                                </form>
+
+                                          </div>
+                                          <div class="card-body">
+                                                <div class="text-center">Are You Already Sign up? Please, 
+                                                      <a href="#">Log in</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+{% endblock content %}
